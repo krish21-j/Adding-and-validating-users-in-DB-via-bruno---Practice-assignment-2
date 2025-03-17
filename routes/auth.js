@@ -6,13 +6,13 @@ const router = express.Router();
 
 router.post('/login', async (req, res) => {
     try {
-        const { mail, password } = req.body;
+        const { email, password } = req.body;
 
-        if (!mail || !password) {
+        if (!email || !password) {
             return res.status(400).json({ message: 'Email and password are required' });
         }
 
-        const user = await User.findOne({ email: mail });
+        const user = await User.findOne({ email: email });
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }

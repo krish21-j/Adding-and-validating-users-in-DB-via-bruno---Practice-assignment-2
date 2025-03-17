@@ -1,18 +1,18 @@
 meta {
-  name: login
+  name: register
   type: http
-  seq: 3
+  seq: 2
 }
 
 post {
-  url: http://localhost:5000/api/auth/login
+  url: http://localhost:5000/api/auth/register
   body: json
   auth: none
 }
 
 body:json {
   {
-     "email": "test1234@example.com",
+     "email": "test12345@example.com",
      "password": "yourwspassword"
   }
   
